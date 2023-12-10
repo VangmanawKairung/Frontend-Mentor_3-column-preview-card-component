@@ -4,7 +4,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ## Table of contents
 
-- [Frontend Mentor - Stats preview card component solution](#frontend-mentor---stats-preview-card-component-solution)
+- [Frontend Mentor - 3-column preview card component solution](#frontend-mentor---3-column-preview-card-component-solution)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -13,7 +13,6 @@ This is a solution to the [3-column preview card component challenge on Frontend
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
@@ -35,8 +34,8 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Links
 
-- Solution URL: [Stats preview card using HTML and CSS (Sass)](https://www.frontendmentor.io/solutions/stats-preview-card-using-html-and-css-sass-5_41bq0aZM)
-- Live Site URL: [Stats preview card component](https://vangmanawkairung.github.io/stats-preview-card/)
+- Solution URL: [3-column preview card component using HTML and CSS (Sass))](https://www.frontendmentor.io/solutions/3column-preview-card-component-using-html-and-css-sass-YrYoBRU_Xy)
+- Live Site URL: [3-column preview card component](https://vangmanawkairung.github.io/stats-preview-card/)
 
 ## My process
 
@@ -51,11 +50,6 @@ This is a solution to the [3-column preview card component challenge on Frontend
 ### What I learned
 
 - The border radius for the element with backgound-image has to re-assign
-
-### Useful resources
-
-- [How to Create an Overlay](https://www.w3schools.com/howto/howto_css_overlay.asp) - This website helps me to handle with color overlay of cover image
-
 
 ## Author
 

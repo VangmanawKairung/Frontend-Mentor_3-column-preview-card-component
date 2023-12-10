@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+body .container div img {
+  width: 50px;
+}
+body .container div h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+body .container div p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+}
+body .container div button {
+  border: none;
+  outline: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: hsl(0, 0%, 95%);
+}
+body .container div button:hover {
+  color: hsla(0, 0%, 100%, 0.75);
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background: none;
+}
+body .container .first-box {
+  background-color: hsl(31, 77%, 52%);
+}
+body .container .first-box button {
+  color: hsl(31, 77%, 52%);
+}
+body .container .second-box {
+  background-color: hsl(184, 100%, 22%);
+}
+body .container .second-box button {
+  color: hsl(184, 100%, 22%);
+}
+body .container .third-box {
+  background-color: hsl(179, 100%, 13%);
+}
+body .container .third-box button {
+  color: hsl(179, 100%, 13%);
+}
+@media (min-width: 375px) and (max-width: 1439px) {
+  body .container {
+    width: 320px;
+    margin: 90px auto;
+  }
+  body .container div {
+    padding: 45px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body .container .first-box {
+    border-radius: 5px 5px 0 0;
+  }
+  body .container .third-box {
+    border-radius: 0 0 5px 5px;
+  }
+}
+@media (min-width: 1440px) {
+  body .container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  body .container div {
+    padding: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body .container div p {
+    margin-bottom: 80px;
+  }
+  body .container .first-box {
+    border-radius: 5px 0 0 5px;
+  }
+  body .container .third-box {
+    border-radius: 0 5px 5px 0;
+  }
+}

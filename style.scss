@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+
+  .container {
+    div {
+      img {
+        width: 50px;
+      }
+
+      h1 {
+        font-family: "Big Shoulders Display", sans-serif;
+        font-weight: 400;
+        color: hsl(0, 0%, 95%);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p {
+        color: hsla(0, 0%, 100%, 0.75);
+        line-height: 1.5rem;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        width: 120px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: hsl(0, 0%, 95%);
+      }
+
+      button:hover {
+        color: hsla(0, 0%, 100%, 0.75);
+        border: 2px solid hsla(0, 0%, 100%, 0.75);
+        background: none;
+      }
+    }
+
+    .first-box {
+      background-color: hsl(31, 77%, 52%);
+
+      button {
+        color: hsl(31, 77%, 52%);
+      }
+    }
+
+    .second-box {
+      background-color: hsl(184, 100%, 22%);
+      button {
+        color: hsl(184, 100%, 22%);
+      }
+    }
+
+    .third-box {
+      background-color: hsl(179, 100%, 13%);
+      button {
+        color: hsl(179, 100%, 13%);
+      }
+    }
+  }
+
+  @media (min-width: 375px) and (max-width: 1439px) {
+    .container {
+      width: 320px;
+      margin: 90px auto;
+
+      div {
+        padding: 45px;
+        height: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .first-box {
+        border-radius: 5px 5px 0 0;
+      }
+
+      .third-box {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container {
+      width: 900px;
+      height: 500px;
+      display: flex;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+
+      div {
+        padding: 46px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+          margin-bottom: 80px;
+        }
+      }
+
+      .first-box {
+        border-radius: 5px 0 0 5px;
+      }
+
+      .third-box {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+}

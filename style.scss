@@ -1,130 +1,166 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+// Font
+$root-topic-font-family: "Big Shoulders Display";
+$root-topic-font-weight: 700;
+$root-article-font-family: "Lexend Deca";
+$root-article-font-weight: 400;
+$root-font-size: 15px;
 
-:root {
-  font-size: 15px;
+// Color
+$bg-head-btn: hsl(0, 0%, 95%);
+$paragraph: hsla(0, 0%, 100%, 0.75);
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+@mixin set-size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin set-color-for-bg-and-btn($bg-color) {
+  background: $bg-color;
+
+  button {
+    color: $bg-color;
+  }
+
+  button:active,
+  button:hover {
+    color: $bg-head-btn;
+  }
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 400;
+  box-sizing: border-box;
+  font-size: $root-font-size;
+}
+
+h2 {
+  color: $bg-head-btn;
+  font-family: $root-topic-font-family;
+  font-weight: $root-topic-font-weight;
+  font-size: 2.65rem;
+  text-transform: uppercase;
+}
+
+p,
+button {
+  font-family: $root-article-font-family;
+  font-weight: $root-article-font-weight;
+}
+
+p {
+  color: $paragraph;
+  line-height: 1.7rem;
+}
+
+button {
+  @include set-size(146px, 48px);
+
+  background: $bg-head-btn;
+  border: none;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+button:active,
+button:hover {
+  background: none;
+  border: 2px solid $bg-head-btn;
+  cursor: pointer;
+}
+
+.orange-card {
+  @include set-color-for-bg-and-btn($bright-orange);
+}
+
+.teal-card {
+  @include set-color-for-bg-and-btn($dark-cyan);
+}
+
+.dark-green-card {
+  @include set-color-for-bg-and-btn($very-dark-cyan);
 }
 
 body {
-  background-color: hsl(0, 0%, 95%);
+  @include set-size(100vw, auto);
 
-  .container {
-    div {
-      img {
-        width: 50px;
-      }
+  min-height: 100vh;
+  background: $bg-head-btn;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-      h1 {
-        font-family: "Big Shoulders Display", sans-serif;
-        font-weight: 400;
-        color: hsl(0, 0%, 95%);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
+  main.card-container {
+    @include set-size(325px, 100%);
 
-      p {
-        color: hsla(0, 0%, 100%, 0.75);
-        line-height: 1.5rem;
-      }
+    margin: 88px 0;
 
-      button {
-        border: none;
-        outline: none;
-        width: 120px;
-        height: 40px;
-        border-radius: 50px;
-        background-color: hsl(0, 0%, 95%);
-      }
+    article.card {
+      @include set-size(100%, 441px);
 
-      button:hover {
-        color: hsla(0, 0%, 100%, 0.75);
-        border: 2px solid hsla(0, 0%, 100%, 0.75);
-        background: none;
-      }
-    }
-
-    .first-box {
-      background-color: hsl(31, 77%, 52%);
-
-      button {
-        color: hsl(31, 77%, 52%);
-      }
-    }
-
-    .second-box {
-      background-color: hsl(184, 100%, 22%);
-      button {
-        color: hsl(184, 100%, 22%);
-      }
-    }
-
-    .third-box {
-      background-color: hsl(179, 100%, 13%);
-      button {
-        color: hsl(179, 100%, 13%);
-      }
-    }
-  }
-
-  @media (min-width: 375px) and (max-width: 1439px) {
-    .container {
-      width: 320px;
-      margin: 90px auto;
-
-      div {
-        padding: 45px;
-        height: 400px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .first-box {
-        border-radius: 5px 5px 0 0;
-      }
-
-      .third-box {
-        border-radius: 0 0 5px 5px;
-      }
-    }
-  }
-
-  @media (min-width: 1440px) {
-    .container {
-      width: 900px;
-      height: 500px;
+      padding: 48px;
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
+      img.card-icon {
+        @include set-size(fit-content, 40px);
+      }
+
+      h2 {
+        margin-top: 10px;
+      }
+    }
+
+    article.card:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    article.card:last-child {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 2.65rem;
+  }
+
+  p {
+    line-height: 1.65rem;
+  }
+
+  body {
+    main.card-container {
+      @include set-size(920px, 500px);
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 20px 0 0 0;
       position: absolute;
       top: 50%;
       left: 50%;
       translate: -50% -50%;
 
-      div {
-        padding: 46px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      article.card {
+        @include set-size(100%, 100%);
 
-        p {
-          margin-bottom: 80px;
+        button.card-btn {
+          margin-top: 55px;
         }
       }
 
-      .first-box {
-        border-radius: 5px 0 0 5px;
+      article.card:first-child {
+        border-radius: 10px 0 0 10px;
       }
 
-      .third-box {
-        border-radius: 0 5px 5px 0;
+      article.card:last-child {
+        border-radius: 0 10px 10px 0;
       }
     }
   }

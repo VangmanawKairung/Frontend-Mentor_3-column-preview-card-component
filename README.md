@@ -46,7 +46,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend-Mentor_3-column-preview-card-component](https://github.com/VangmanawKairung/Frontend-Mentor_3-column-preview-card-component)
+- Solution URL: [3-column preview card component using HTML and CSS (Sass)](https://www.frontendmentor.io/solutions/3-column-preview-card-component-using-html-and-css-sass-NSAer57MI3)
 - Live Site URL: [Frontend Mentor | 3-column preview card component](https://vangmanawkairung.github.io/Frontend-Mentor_3-column-preview-card-component/)
 
 ## My process

@@ -1,23 +1,25 @@
 # Frontend Mentor - 3-column preview card component solution
 
+![](.reference/preview.jpg)
+
 This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Frontend Mentor - 3-column preview card component solution](#frontend-mentor---3-column-preview-card-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+    - [AI Collaboration](#ai-collaboration)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -30,15 +32,20 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<details>
+  <summary>Mobile view</summary>
+  <img src='screenshots/mobile-view.png' alt='Social links profile challenge - Mobile view' width='375px'>
+</details>
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+<details>
+  <summary>Desktop view</summary>
+  <img src='screenshots/desktop-view.png' alt='Social links profile challenge - Desktop view'>
+</details>
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<details>
+  <summary>Active state view</summary>
+  <img src='screenshots/active-state-view.png' alt='Social links profile challenge - Active state view'>
+</details>
 
 ### Links
 
@@ -50,73 +57,52 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- CSS custom properties (Variables)
+- Flexbox & CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Modern Native CSS (including CSS Nesting)
+- [React](https://reactjs.org/) - JS Library
+- [Vite](https://vitejs.dev/) - Frontend Tooling
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Working through this challenge helped me refine several practical skills in frontend development, accessibility, and CSS architecture:
 
-To see how you can add code snippets, see below:
+- **Accessibility (a11y) Best Practices**: I learned how to handle repetitive interactive elements gracefully. Instead of ambiguous link descriptions, I used `aria-label` dynamically (`aria-label={`Learn more about ${title}`}`) to provide explicit context for screen reader users. I also practiced using `aria-hidden="true"` for decorative SVGs.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- **BEM Naming Methodology & Clean Architecture**: I deepened my understanding of BEM by structuring components into clean Blocks, Elements, and Modifiers (e.g., using `.card--orange` for theme-based state variants). I also ensured semantic consistency by replacing element-selector styling with flat class names (like `.footer__link`).
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- **Advanced Layout & Sticky Footer Patterns**: I gained a deeper understanding of vertical centering and dynamic viewports. By combining `#root` with `min-height: 100dvh` and applying `margin-top: auto` / `margin-bottom: auto` to `.cards-grid` and `.footer`, I resolved desktop layout collapse issues and ensured a true sticky footer across all screen sizes.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- **Dynamic Component Mapping in React**: I improved how I handle structured data props by mapping items dynamically while maintaining strictly unique `key` props and clean data structures.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Moving forward, I plan to focus on:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- **Mathematical UI Calculations**: Further exploring relationships like calculated inner vs. outer border-radius formulas to build pixel-perfect UI designs seamlessly.
+
+- **Fluid Typography and Spacing**: Experimenting with modern CSS functions like `clamp()`, `min()`, and `max()` to create smooth scaling without relying solely on traditional fixed media query breakpoints.
+
+- **Advanced State & Interactive Polish**: Refining keyboard navigation focus indicators (`:focus-visible`), custom CSS transitions, and micro-interactions for interactive buttons.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- **[How to adjust the element's inner border radius](https://nikitahl.com/adjust-element-inner-border-radius/)** - This article introduced me to the mathematical relationship between inner and outer border radius. Even though I ended up not needing `content-box` for this layout, understanding how outer radius minus padding equals inner radius was an eye-opening concept that replaced pure guessing.
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+- **Tools Used**: Gemini and Google Search AI Mode.
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- **Workflow & Insights**: I utilized AI as a Senior Developer reviewer to audit my codebase for global accessibility standards (a11y), BEM semantic correctness, and layout architecture. It helped me identify edge-case layout issues—such as understanding why vertical `margin: auto` requires an explicit height context on the parent flex container—and refine my code to be production-ready without reliance on unnecessary libraries.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- GitHub: [Kairung Vangmanaw](https://github.com/VangmanawKairung)
+- Frontend Mentor - [@VangmanawKairung](https://www.frontendmentor.io/profile/VangmanawKairung)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I would like to express my gratitude to **Frontend Mentor** for providing this engaging challenge. 
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+A big thanks to **Visual Studio Code** for being an essential workspace tool, and to **Preview on macOS**—which proved surprisingly effective for quick pixel measurement and visual inspection alongside my design overlay, allowing me to pinpoint dimensions efficiently without needing heavy design tools. I am also thankful for **Chrome DevTools** for precise responsive layout testing and debugging.

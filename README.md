@@ -34,17 +34,17 @@ Users should be able to:
 
 <details>
   <summary>Mobile view</summary>
-  <img src='screenshots/mobile-view.png' alt='Social links profile challenge - Mobile view' width='375px'>
+  <img src='screenshots/mobile-view.png' alt='3-column preview card component - Mobile view' width='375px'>
 </details>
 
 <details>
   <summary>Desktop view</summary>
-  <img src='screenshots/desktop-view.png' alt='Social links profile challenge - Desktop view'>
+  <img src='screenshots/desktop-view.png' alt='3-column preview card component - Desktop view'>
 </details>
 
 <details>
   <summary>Active state view</summary>
-  <img src='screenshots/active-state-view.png' alt='Social links profile challenge - Active state view'>
+  <img src='screenshots/active-state-view.png' alt='3-column preview card component - Active state view'>
 </details>
 
 ### Links

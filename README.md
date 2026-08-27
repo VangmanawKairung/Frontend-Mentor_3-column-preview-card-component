@@ -88,7 +88,7 @@ Moving forward, I plan to focus on:
 
 ### Useful resources
 
-- **[How to adjust the element's inner border radius](https://nikitahl.com/adjust-element-inner-border-radius/)** - This article introduced me to the mathematical relationship between inner and outer border radius. Even though I ended up not needing `content-box` for this layout, understanding how outer radius minus padding equals inner radius was an eye-opening concept that replaced pure guessing.
+- [How to adjust the element's inner border radius](https://nikitahl.com/adjust-element-inner-border-radius/) - This article introduced me to the mathematical relationship between inner and outer border radius. Even though I ended up not needing `content-box` for this layout, understanding how outer radius minus padding equals inner radius was an eye-opening concept that replaced pure guessing.
 
 ### AI Collaboration
 

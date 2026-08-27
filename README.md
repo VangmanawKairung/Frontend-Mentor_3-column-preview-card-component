@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [3-column preview card built with React, BEM & Modern CSS](https://www.frontendmentor.io/solutions/3-column-preview-card-component-using-html-and-css-sass-NSAer57MI3)
+- Live Site URL: [Frontend Mentor | 3-column preview card component](https://challenged-by-frontend-mentor.github.io/3-column-preview-card-component/)
 
 ## My process
 

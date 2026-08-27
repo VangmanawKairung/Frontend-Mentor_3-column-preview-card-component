@@ -38,7 +38,7 @@ const CAR_DATA = [
 
 function App() {
   return (
-    <div className="page-layout">
+    <>
       <main className="cards-grid">
         {CAR_DATA.map((car) => (
           <Card
@@ -52,7 +52,7 @@ function App() {
         ))}
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

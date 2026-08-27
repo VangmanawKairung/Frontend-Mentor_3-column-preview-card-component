@@ -1,0 +1,154 @@
+:root {
+  /* Colors */
+  --clr-primary-gold-500: hsl(31, 77%, 52%);
+  --clr-primary-cyan-800: hsl(184, 100%, 22%);
+  --clr-primary-green-950: hsl(179, 100%, 13%);
+  --clr-neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-gray-100: hsl(0, 0%, 95%);
+
+  /* Typography */
+  --ff-body: "Lexend Deca", sans-serif;
+  --ff-head: "Big Shoulders", sans-serif;
+  --fs-body: 15px;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-gray-100);
+  background-color: var(--clr-neutral-gray-100);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.cards-grid {
+  display: grid;
+  max-width: 330px;
+  overflow: hidden;
+  padding: 88px 24px;
+  box-sizing: content-box;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 500px;
+    max-width: 920px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px;
+}
+
+.card:nth-child(1) {
+  border-radius: 7px 7px 0 0;
+
+  @media (min-width: 1024px) {
+    border-radius: 7px 0 0 7px;
+  }
+}
+
+.card:nth-child(3) {
+  border-radius: 0 0 7px 7px;
+
+  @media (min-width: 1024px) {
+    border-radius: 0 7px 7px 0;
+  }
+}
+
+.card--orange {
+  background-color: var(--clr-primary-gold-500);
+
+  .card__button {
+    color: var(--clr-primary-gold-500);
+  }
+}
+
+.card--teal {
+  background-color: var(--clr-primary-cyan-800);
+
+  .card__button {
+    color: var(--clr-primary-cyan-800);
+  }
+}
+
+.card--dark-green {
+  background-color: var(--clr-primary-green-950);
+
+  .card__button {
+    color: var(--clr-primary-green-950);
+  }
+}
+
+.card__icon {
+  width: fit-content;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 58px;
+  }
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-family: var(--ff-head);
+  font-size: 2.39rem;
+}
+
+.card__description {
+  color: var(--clr-neutral-transparent-white);
+  line-height: 1.68;
+}
+
+.card__button {
+  width: 146px;
+  height: 48px;
+  background-color: var(--clr-neutral-gray-100);
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button:hover,
+.card__button:focus-visible {
+  color: var(--clr-neutral-gray-100);
+  background-color: transparent;
+  border: 2px solid var(--clr-neutral-gray-100);
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.7rem;
+  align-self: center;
+  margin-top: auto;
+  padding-bottom: 10px;
+  color: var(--clr-primary-cyan-800);
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--clr-primary-green-950);
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}

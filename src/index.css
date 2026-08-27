@@ -44,8 +44,3 @@ h4,
 p {
   overflow-wrap: break-word;
 }
-
-/* Set root */
-#root {
-  min-height: 100dvh;
-}
